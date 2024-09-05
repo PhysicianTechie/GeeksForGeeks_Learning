@@ -75,4 +75,6 @@ def evenOdd(x):
 print (evenOdd(2))
 print (evenOdd(5))
 
+print(evenOdd(12))
+print(evenOdd(8))
 
