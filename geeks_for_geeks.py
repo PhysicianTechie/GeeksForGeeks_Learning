@@ -62,7 +62,7 @@ print("i'm outside the if else block")
 for i in range (0,10,2):
             print(i)
 
-"""
+
 
 
 
@@ -78,3 +78,24 @@ print (evenOdd(5))
 print(evenOdd(12))
 print(evenOdd(8))
 
+"""
+### Getting Started with Python Programming
+# SYNTAX
+# dont need to declare variable's type explicitly,python will dynamically determine type.
+
+#variables in python
+
+# numbers
+
+
+#python string
+
+string1 = '''Geeks
+For
+Life'''
+print("\nCreating a multiline string: ")
+# print the string
+
+print(string1)
+
+#moving on to next topic on string
