@@ -107,4 +107,38 @@ gfg = "GeeksforGeeks"
 print("Original String:", gfg)
 print("Reversed string:", gfg[::-1])
 
+# use both list and string method to update the character
+string1= "Hello, I'm a Geek"
+print("Initial string: ")
+print(string1)
+
+#updating the character of a string using list method
+
+string1_list = list(string1)
+string1_list[7] = 'g'
+string1 = ''.join(string1_list)
+print("Updated string: ")
+print(string1)          
+
+
+# use slicing method to delete the character at 2nd Index
+
+string2 = "Hello, I'm a Geek"
+print("Original string: ")
+print(string2)
+
+# deleting the character at 2nd index using slicing method
+
+string2 = string2[:2] + string2[3:]
+print("Updated string: ")
+print(string2)
+
+
+# python string formatting using format() method
+
+name = "GeeksforGeeks"
+age = 21
+print("Hello, my name is {0} and I am {1} years old".format(name, age))
+
+
 
