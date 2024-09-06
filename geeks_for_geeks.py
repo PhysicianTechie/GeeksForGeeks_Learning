@@ -99,3 +99,12 @@ print("\nCreating a multiline string: ")
 print(string1)
 
 #moving on to next topic on string
+#Only Integers are allowed to be passed as an index, float or other types that will cause a TypeError.
+
+gfg = "GeeksforGeeks"
+#program to reverse string
+
+print("Original String:", gfg)
+print("Reversed string:", gfg[::-1])
+
+
