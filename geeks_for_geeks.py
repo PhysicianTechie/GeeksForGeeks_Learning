@@ -170,5 +170,10 @@ string = input("enter the elements (space seperated): ")
 
 #made some changes to gitlens settings for easy access to github
 
+# here are some more changes
+# split the string and store it to a list
+lst = string.split()
+print('The list is: ',lst)
+
 
 
