@@ -79,7 +79,9 @@ print(evenOdd(12))
 print(evenOdd(8))
 
 """
-### Getting Started with Python Programming
+### ######################################
+# Getting Started with Python Programming
+###########################################
 # SYNTAX
 # dont need to declare variable's type explicitly,python will dynamically determine type.
 
@@ -145,7 +147,7 @@ print("Hello, my name is {0} and I am {1} years old".format(name, age))
 # Variables continued...
 # lists
 #create a list
-
+'''
 my_list = [1, 2, 3, 4, 5]
 
 # access the elements of the list
@@ -176,5 +178,22 @@ lst = string.split()
 print('The list is: ',lst)
 
 ####
+# print the numbers from 0 to 4 using range and in single line.
 
+for i in range(5):
+            print(i, end=' ')
+print()
 
+# please crate class CSStudent with stream cse and objects 101 and 102
+
+class CSStudent:
+            def __init__(self, name, roll_no, stream, course1, course2):
+                        self.name = name
+                        self.roll_no = roll_no
+                        self.stream = stream
+
+'''
+
+###################################################
+Learn Python Input/Output
+###################################################
