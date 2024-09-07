@@ -87,7 +87,7 @@ print(evenOdd(8))
 
 # numbers
 
-
+"""
 #python string
 
 string1 = '''Geeks
@@ -139,6 +139,33 @@ print(string2)
 name = "GeeksforGeeks"
 age = 21
 print("Hello, my name is {0} and I am {1} years old".format(name, age))
+"""
 
+# 7 Sep 2024
+# Variables continued...
+# lists
+#create a list
 
+my_list = [1, 2, 3, 4, 5]
 
+# access the elements of the list
+
+print(my_list[0])  # this will print 1
+print(my_list[1])  # this will print 2
+print(my_list[2])  # this will print 3
+print(my_list[3])  # this will print 4
+print(my_list[4])  # this will print 5
+
+#getting size of the list
+
+print(len(my_list))  # this will print 5
+
+#complexities for accessing elements in a lists
+#accessing an element in a list using index is O(1)
+#accessing an element in a list using index is O(n)
+#accessing an element in a list using index is O(n)
+#accessing an element in a list using index is O(n)
+
+string = input("enter the elements (space seperated): ")
+
+#made some changes to gitlens settings for easy access to github
