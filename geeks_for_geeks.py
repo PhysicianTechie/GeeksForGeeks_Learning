@@ -198,13 +198,21 @@ class CSStudent:
 #Learn Python Input/Output
 ###################################################
 # build a countdown timer like 5>4>3>2>1
+'''
 import time
 
 for i in range(5, 0, -1):
             print(i)
             time.sleep(1)
 print("blast off!")
+'''
 
+# taking multiple inputs from user in python
+
+
+#######################################################
+#Python data types
+#######################################################
 
 
 
