@@ -208,7 +208,7 @@ print("blast off!")
 '''
 # taking multiple inputs from user in python
 
-
+'''
 #######################################################
 #Python data types
 #######################################################
@@ -218,3 +218,16 @@ print("blast off!")
 # python operators
 
 ##########################################################
+# how to access the elements of the string
+
+# string slicing with example
+##########################################################
+'''
+#Python conditional statement
+
+###########################################################\
+
+# Python Functions
+
+          
+
