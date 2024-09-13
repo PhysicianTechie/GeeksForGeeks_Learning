@@ -225,9 +225,134 @@ print("blast off!")
 '''
 #Python conditional statement
 
+
+# python loops
 ###########################################################\
 
 # Python Functions
+'''
+def fun():
+            print("welcome to geeksforgeeks")
+            print("function is defined")
+fun()
 
-          
+# create a function to add two numbers
+def add(a, b):
+            return a + b
+print(add(2, 3))
+''' 
+'''
+# create a function to determine if given number is prime or not
+
+def is_prime(n):
+            if n <= 1:
+                        return False
+            for i in range(2, n):
+                        if n % i == 0:
+                                    return False
+            return True
+print(is_prime(5))
+print(is_prime(6))
+'''
+
+#########################################################
+
+
+# solving some problems from geeksforgeeks
+# Given an unsorted array arr of size n that contains only non negative integers, find a sub-array (continuous elements) that has sum equal to s. You mainly need to return the left and right indexes(1-based indexing) of that subarray.In case of multiple subarrays, return the subarray indexes which come first on moving from left to right. If no such subarray exists return an array consisting of element -1.
+'''
+def subarray_sum(arr, s):
+            n = len(arr)
+            result = [-1, -1]
+            curr_sum = 0
+            start = 0
+            for i in range(n):
+                        curr_sum += arr[i]
+                        while curr_sum > s:
+                                    curr_sum -= arr[start]
+                                    start += 1
+                        if curr_sum == s:
+                                    result = [start + 1, i + 1]
+                                    break
+            return result
+
+# test the function
+arr = [1, 2, 3, 7, 5]
+s = 12
+print(subarray_sum(arr, s))
+
+#Given two Arrays A[] and B[] of length N and M respectively. Find the minimum number of insertions and deletions on the array A[], required to make both the arrays identical.Note: Array B[] is sorted and all its elements are distinct, operations can be performed at any index not necessarily at end.
+
+def min_operations(A, B):
+            n = len(A)
+            m = len(B)
+            i = j = count = 0
+            while i < n and j < m:
+                        if A[i] == B[j]:
+                                    i += 1
+                                    j += 1
+                        else:
+                                    count += 1
+                                    i += 1
+            count += n - i
+            return count
+
+# test the function
+A = [1, 2, 3, 5, 1]
+B = [1, 3, 5]
+print(min_operations(A, B))
+
+
+#Given a number num, our task is to find the closest Palindrome number whose absolute difference with the given number is minimal. If 2 Palindrome numbers have the same absolute difference as the given number, take the smaller one.
+
+def nearest_palindrome(num):
+    """
+    Find the nearest palindrome number to the given number.
+
+    Args:
+        num (int): The input number.
+
+    Returns:
+        int: The nearest palindrome number.
+    """
+    num_str = str(num)
+    num_len = len(num_str)
+
+    # Handle even-length palindromes
+    if num_len % 2 == 0:
+        left_half = num_str[:num_len // 2]
+        right_half = left_half[::-1]
+        palindrome = int(left_half + right_half)
+        if palindrome < num:
+            palindrome = int(left_half + str(int(left_half) + 1)[::-1])
+
+    # Handle odd-length palindromes
+    else:
+        left_half = num_str[:num_len // 2]
+        middle = num_str[num_len // 2]
+        right_half = left_half[::-1]
+        palindrome = int(left_half + middle + right_half)
+        if palindrome < num:
+            if middle == '9':
+                left_half = str(int(left_half) + 1)
+                palindrome = int(left_half + '0' + left_half[::-1])
+            else:
+                palindrome = int(left_half + str(int(middle) + 1) + left_half[::-1])
+
+    return palindrome
+
+# Test the function
+num = 123
+print(nearest_palindrome(num))
+
+
+'''
+#################################################################################
+
+#PYTHON OOP CONCEPTS
+
+#################################################################################
+
+
+
 
