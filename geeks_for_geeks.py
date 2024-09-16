@@ -350,9 +350,124 @@ print(nearest_palindrome(num))
 #################################################################################
 
 #PYTHON OOP CONCEPTS
-
+'''
 #################################################################################
+An object consists of:
+
+State: It is represented by the attributes of an object. It also reflects the properties of an object.
+Behavior: It is represented by the methods of an object. It also reflects the response of an object to other objects.
+Identity: It gives a unique name to an object and enables one object to interact with other objects.
+'''
+
+# Create class Dog with attribute as mammal
+# also access the class attributes
+'''
+class Dog:
+    # class attribute
+    species = "mammal"
 
 
+    # instance attribute
+    def __init__(self, name):
+        self.name = name
+        
+#driver code
+# instantiate the Dog class
+philo = Dog("Philo")
+mikey = Dog("Mikey")
+
+# access the class attribute
+print("Philo is a {}".format(philo.__class__.species))
+print("Mikey is also a {}".format(mikey.__class__.species))
+
+# access the instance attribute
+print("{} is {}".format(philo.name, philo.species))
+print("{} is {}".format(mikey.name, mikey.species))
+
+# change the instance attribute
+mikey.species = "reptile"
+
+# access the changed instance attribute
+print("{} is {}".format(mikey.name, mikey.species))
+
+
+##########################################
+# Python code to demonstrate how constructors are called create parent class Person and child class as Employee
+
+
+# parent class
+class Person:
+    def __init__(self, name, idnumber):
+        self.name = name
+        self.idnumber = idnumber
+
+    def display(self):
+        print(self.name)
+        print(self.idnumber)
+        
+    def details(self):
+        print(self.name)
+        print(self.idnumber)
+        
+# child class
+class Employee(Person):
+    def __init__(self, name, idnumber, salary, post):
+        self.salary = salary
+        self.post = post
+
+        # invoking the __init__ of the parent class
+        Person.__init__(self, name, idnumber)
+
+        # using super() method
+        super().__init__(name, idnumber)
+
+    def details(self):
+        print(self.name)
+        print(self.idnumber)
+        print(self.salary)
+        print(self.post)
+
+# creation of an object variable or an instance
+a = Employee('Rahul', 886012, 200000, "Intern")
+
+# calling methods
+a.display()
+a.details()
+
+##################################################################
+
+#Polymorphism in Python
+#demonstrate with class bird
+class Bird:
+    def intro(self):
+        print("There are many types of birds.")
+        
+    def flight(self):
+        print("Most of the birds can fly but some cannot.")
+
+class sparrow(Bird):
+    def flight(self):
+        print("Sparrows can fly.")
+        
+#create class ostrich
+class ostrich(Bird):
+    def flight(self):
+        print("Ostriches cannot fly.")
+        
+obj_bird = Bird()
+obj_spr = sparrow()
+obj_ost = ostrich()
+
+obj_bird.intro()
+obj_bird.flight()
+
+obj_spr.intro()
+obj_spr.flight()
+
+obj_ost.intro()
+obj_ost.flight()
+
+'''
+####################################################################################
 
 
